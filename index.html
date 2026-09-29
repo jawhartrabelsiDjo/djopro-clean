@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DjoPro Clean - Entreprise de nettoyage en Île-de-France. Nettoyage de vitres, maisons, terrasses, commerces, locaux et fins de chantier. Devis gratuit.">
   <title>DjoPro Clean | Nettoyage en Île-de-France</title>
 
   <style>
@@ -12,146 +13,328 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      color: #1f2937;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
       background: #ffffff;
       line-height: 1.6;
     }
 
     header {
-      background: #0b3b60;
+      background: #073b78;
       color: white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,.15);
     }
 
-    .logo {
-      font-size: 27px;
-      font-weight: bold;
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 78px;
+      padding: 10px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      background: white;
+      border-radius: 12px;
+      padding: 4px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 24px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      opacity: .8;
     }
 
     .hero {
-      background: linear-gradient(135deg, #0b3b60, #168aad);
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(3,37,78,.74), rgba(3,37,78,.66)),
+        url("accueil.jpg") center/cover no-repeat;
       color: white;
+      display: flex;
+      align-items: center;
       text-align: center;
-      padding: 90px 20px;
+      padding: 80px 20px;
     }
 
-    .hero h1 {
-      font-size: 44px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 750px;
+    .hero-content {
+      max-width: 900px;
       margin: auto;
     }
 
+    .hero-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      background: white;
+      border-radius: 22px;
+      padding: 8px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 760px;
+      margin: 0 auto 30px;
+    }
+
     .buttons {
-      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 24px;
-      margin: 7px;
-      border-radius: 8px;
+      padding: 15px 25px;
+      border-radius: 9px;
       text-decoration: none;
-      font-weight: bold;
-      background: white;
-      color: #0b3b60;
+      font-weight: 800;
+      transition: .2s;
     }
 
-    .whatsapp {
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-call {
+      background: white;
+      color: #073b78;
+    }
+
+    .btn-whatsapp {
       background: #25D366;
       color: white;
     }
 
-    section {
-      padding: 65px 8%;
+    .section {
+      padding: 80px 20px;
     }
 
-    h2 {
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
       text-align: center;
-      color: #0b3b60;
-      font-size: 32px;
-      margin-bottom: 35px;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      color: #073b78;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #657084;
+      font-size: 18px;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
-    .service {
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,.10);
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 23px;
+    }
+
+    .card h3 {
+      color: #073b78;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .light {
+      background: #f5f8fc;
+    }
+
+    .advantages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .advantage {
+      background: white;
       padding: 25px;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 7px 22px rgba(0,0,0,.08);
+    }
+
+    .advantage img {
+      width: 100%;
+      max-width: 180px;
+      height: 130px;
+      object-fit: contain;
+      margin-bottom: 15px;
       border-radius: 12px;
-      background: #f3f7fa;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,.08);
     }
 
-    .service h3 {
-      margin-bottom: 10px;
-      color: #0b3b60;
+    .advantage h3 {
+      color: #073b78;
+      margin-bottom: 8px;
     }
 
-    .about {
-      background: #f3f7fa;
+    .cta {
+      background: #073b78;
+      color: white;
       text-align: center;
     }
 
-    .about p {
-      max-width: 850px;
-      margin: auto;
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 28px;
       font-size: 18px;
     }
 
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      margin: 8px 0;
+    .contact-info {
+      margin-top: 25px;
       font-size: 18px;
     }
 
     footer {
-      background: #0b3b60;
+      background: #052c59;
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 25px 20px;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 34px;
-      }
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 29px;
+      text-decoration: none;
+      box-shadow: 0 5px 20px rgba(0,0,0,.25);
+      z-index: 999;
+    }
 
-      header {
-        justify-content: center;
-        text-align: center;
+    @media (max-width: 850px) {
+      .services,
+      .advantages {
+        grid-template-columns: 1fr 1fr;
       }
 
       nav {
-        width: 100%;
-        margin-top: 10px;
+        display: none;
       }
 
-      nav a {
-        margin: 0 7px;
+      .hero {
+        min-height: 560px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        justify-content: center;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .hero {
+        min-height: 520px;
+        padding: 60px 18px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .services,
+      .advantages {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 60px 18px;
+      }
+
+      .section-title h2,
+      .cta h2 {
+        font-size: 31px;
+      }
+
+      .card img {
+        height: 220px;
       }
     }
   </style>
@@ -160,100 +343,183 @@
 <body>
 
 <header>
-  <div class="logo">DjoPro Clean</div>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#services">Nos services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="nav">
+    <a class="brand" href="#accueil">
+      <img src="logo.png" alt="Logo DjoPro Clean">
+      <span>DjoPro Clean</span>
+    </a>
+
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Nos services</a>
+      <a href="#pourquoi">Pourquoi nous ?</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero" id="accueil">
-  <h1>DjoPro Clean</h1>
-  <p>
-    Votre partenaire de confiance pour vos besoins de nettoyage
-    dans toute l'Île-de-France.
-  </p>
+  <div class="hero-content">
+    <img class="hero-logo" src="logo.png" alt="DjoPro Clean">
 
-  <div class="buttons">
-    <a class="btn" href="tel:+33765794252">📞 Appelez-nous</a>
-    <a class="btn whatsapp"
-       href="https://wa.me/33765794252"
-       target="_blank">
-       WhatsApp
-    </a>
-  </div>
-</section>
+    <h1>DjoPro Clean</h1>
 
-<section id="services">
-  <h2>Nos services</h2>
+    <p>
+      Votre partenaire de confiance pour tous vos besoins de nettoyage
+      dans toute l'Île-de-France.
+    </p>
 
-  <div class="services">
-    <div class="service">
-      <h3>Nettoyage de vitres</h3>
-      <p>Des vitres propres et soignées pour particuliers et professionnels.</p>
-    </div>
+    <div class="buttons">
+      <a class="btn btn-call" href="tel:+33758465300">
+        ☎ Appelez-nous
+      </a>
 
-    <div class="service">
-      <h3>Terrasses</h3>
-      <p>Nettoyage approfondi de vos terrasses et surfaces extérieures.</p>
-    </div>
-
-    <div class="service">
-      <h3>Maisons</h3>
-      <p>Des prestations adaptées à vos besoins pour un intérieur propre.</p>
-    </div>
-
-    <div class="service">
-      <h3>Commerces et locaux</h3>
-      <p>Entretien de commerces, bureaux et autres locaux professionnels.</p>
-    </div>
-
-    <div class="service">
-      <h3>Fin de chantier</h3>
-      <p>Remise en état et nettoyage après vos travaux.</p>
-    </div>
-
-    <div class="service">
-      <h3>Dégraissage de machines</h3>
-      <p>Nettoyage et dégraissage adaptés aux équipements professionnels.</p>
-    </div>
-
-    <div class="service">
-      <h3>Services divers</h3>
-      <p>Une demande particulière ? Contactez-nous pour une solution adaptée.</p>
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/33765794252"
+         target="_blank"
+         rel="noopener">
+        WhatsApp
+      </a>
     </div>
   </div>
 </section>
 
-<section class="about">
-  <h2>Pourquoi choisir DjoPro Clean ?</h2>
-  <p>
-    Nous intervenons dans toute l'Île-de-France avec sérieux,
-    ponctualité et attention. Notre priorité est de proposer un service
-    fiable et adapté aux besoins de chaque client.
-  </p>
+<section class="section" id="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Nos services</h2>
+      <p>Des prestations de nettoyage adaptées aux particuliers et aux professionnels.</p>
+    </div>
+
+    <div class="services">
+
+      <article class="card">
+        <img src="vitres.jpg" alt="Nettoyage de vitres">
+        <div class="card-content">
+          <h3>Nettoyage de vitres</h3>
+          <p>Vitres propres et soignées pour maisons, commerces et locaux professionnels.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="terrasse.png" alt="Nettoyage de terrasse">
+        <div class="card-content">
+          <h3>Terrasses</h3>
+          <p>Nettoyage approfondi des terrasses et surfaces extérieures.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="maison.png" alt="Nettoyage de maison">
+        <div class="card-content">
+          <h3>Maisons</h3>
+          <p>Un nettoyage soigné pour garder votre intérieur propre et agréable.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="commerces.jpg" alt="Nettoyage de commerces">
+        <div class="card-content">
+          <h3>Commerces et locaux</h3>
+          <p>Des espaces propres et accueillants pour vos clients et collaborateurs.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="chantier.jpg" alt="Nettoyage de fin de chantier">
+        <div class="card-content">
+          <h3>Fin de chantier</h3>
+          <p>Remise en état et nettoyage après travaux avant la livraison des locaux.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="divers.png" alt="Services divers de nettoyage">
+        <div class="card-content">
+          <h3>Services divers</h3>
+          <p>Nettoyage de locaux, surfaces et autres besoins spécifiques sur demande.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Demandez votre devis gratuit</h2>
+<section class="section light" id="pourquoi">
+  <div class="container">
 
-  <p>📞 07 65 79 42 52</p>
-  <p>📞 07 58 46 53 00</p>
-  <p>✉️ Djoproclean@outlook.fr</p>
+    <div class="section-title">
+      <h2>Pourquoi choisir DjoPro Clean ?</h2>
+      <p>Un service simple, sérieux et adapté à vos besoins.</p>
+    </div>
 
-  <div class="buttons">
-    <a class="btn whatsapp"
-       href="https://wa.me/33765794252"
-       target="_blank">
-       Demander un devis sur WhatsApp
-    </a>
+    <div class="advantages">
+
+      <div class="advantage">
+        <img src="expertise.jpg" alt="Expertise DjoPro Clean">
+        <h3>Expertise</h3>
+        <p>Un travail réalisé avec attention et soin.</p>
+      </div>
+
+      <div class="advantage">
+        <img src="rapidite.jpg" alt="Service rapide">
+        <h3>Réactivité</h3>
+        <p>Nous répondons rapidement à vos demandes.</p>
+      </div>
+
+      <div class="advantage">
+        <img src="devisGratuit.jpg" alt="Devis gratuit">
+        <h3>Devis gratuit</h3>
+        <p>Expliquez-nous votre besoin et demandez votre devis gratuitement.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="contact">
+  <div class="container">
+
+    <h2>Besoin d'un nettoyage ?</h2>
+
+    <p>
+      DjoPro Clean intervient dans toute l'Île-de-France.
+      Contactez-nous pour discuter de votre besoin et obtenir un devis gratuit.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-call" href="tel:+33758465300">
+        ☎ 07 58 46 53 00
+      </a>
+
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/33765794252"
+         target="_blank"
+         rel="noopener">
+        WhatsApp : 07 65 79 42 52
+      </a>
+    </div>
+
+    <div class="contact-info">
+      ✉ djoproclean@outlook.fr<br>
+      📍 Intervention dans toute l'Île-de-France
+    </div>
+
   </div>
 </section>
 
 <footer>
-  © DjoPro Clean — Nettoyage en Île-de-France
+  <p>© 2026 DjoPro Clean — Tous droits réservés.</p>
 </footer>
+
+<a class="floating-whatsapp"
+   href="https://wa.me/33765794252"
+   target="_blank"
+   rel="noopener"
+   aria-label="Contacter DjoPro Clean sur WhatsApp">
+  ☎
+</a>
 
 </body>
 </html>

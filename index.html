@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DjoPro Clean | Nettoyage en Île-de-France</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b3b60;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b3b60, #168aad);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      margin: 7px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      background: white;
+      color: #0b3b60;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0b3b60;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      padding: 25px;
+      border-radius: 12px;
+      background: #f3f7fa;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      color: #0b3b60;
+    }
+
+    .about {
+      background: #f3f7fa;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
+    footer {
+      background: #0b3b60;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DjoPro Clean</div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Nos services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="accueil">
+  <h1>DjoPro Clean</h1>
+  <p>
+    Votre partenaire de confiance pour vos besoins de nettoyage
+    dans toute l'Île-de-France.
+  </p>
+
+  <div class="buttons">
+    <a class="btn" href="tel:+33765794252">📞 Appelez-nous</a>
+    <a class="btn whatsapp"
+       href="https://wa.me/33765794252"
+       target="_blank">
+       WhatsApp
+    </a>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Nos services</h2>
+
+  <div class="services">
+    <div class="service">
+      <h3>Nettoyage de vitres</h3>
+      <p>Des vitres propres et soignées pour particuliers et professionnels.</p>
+    </div>
+
+    <div class="service">
+      <h3>Terrasses</h3>
+      <p>Nettoyage approfondi de vos terrasses et surfaces extérieures.</p>
+    </div>
+
+    <div class="service">
+      <h3>Maisons</h3>
+      <p>Des prestations adaptées à vos besoins pour un intérieur propre.</p>
+    </div>
+
+    <div class="service">
+      <h3>Commerces et locaux</h3>
+      <p>Entretien de commerces, bureaux et autres locaux professionnels.</p>
+    </div>
+
+    <div class="service">
+      <h3>Fin de chantier</h3>
+      <p>Remise en état et nettoyage après vos travaux.</p>
+    </div>
+
+    <div class="service">
+      <h3>Dégraissage de machines</h3>
+      <p>Nettoyage et dégraissage adaptés aux équipements professionnels.</p>
+    </div>
+
+    <div class="service">
+      <h3>Services divers</h3>
+      <p>Une demande particulière ? Contactez-nous pour une solution adaptée.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <h2>Pourquoi choisir DjoPro Clean ?</h2>
+  <p>
+    Nous intervenons dans toute l'Île-de-France avec sérieux,
+    ponctualité et attention. Notre priorité est de proposer un service
+    fiable et adapté aux besoins de chaque client.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Demandez votre devis gratuit</h2>
+
+  <p>📞 07 65 79 42 52</p>
+  <p>📞 07 58 46 53 00</p>
+  <p>✉️ Djoproclean@outlook.fr</p>
+
+  <div class="buttons">
+    <a class="btn whatsapp"
+       href="https://wa.me/33765794252"
+       target="_blank">
+       Demander un devis sur WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  © DjoPro Clean — Nettoyage en Île-de-France
+</footer>
+
+</body>
+</html>

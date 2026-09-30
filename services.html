@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Demande de devis | DjoPro Clean</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f8fa;
+      color: #172033;
+    }
+
+    /* EN-TÊTE */
+    header {
+      background: white;
+      padding: 15px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      height: 75px;
+      width: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #172033;
+      font-weight: bold;
+      margin-left: 25px;
+    }
+
+    nav a:hover {
+      color: #00a86b;
+    }
+
+    /* TITRE */
+    .hero {
+      background: #172033;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* FORMULAIRE */
+    .form-section {
+      padding: 45px 20px;
+    }
+
+    .form-container {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .intro {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #00a86b;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      background: #00a86b;
+      color: white;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #008d5a;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 25px;
+      line-height: 1.7;
+    }
+
+    .contact a {
+      color: #00a86b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #172033;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 30px;
+    }
+
+    /* VERSION MOBILE */
+    @media (max-width: 650px) {
+
+      header {
+        padding: 10px 15px;
+      }
+
+      .logo {
+        height: 55px;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 35px 15px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .form-section {
+        padding: 25px 12px;
+      }
+
+      .form-container {
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <a href="index.html">
+    <img src="logo.png" alt="DjoPro Clean" class="logo">
+  </a>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Demander un devis</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h1>Demandez votre devis gratuit</h1>
+
+  <p>
+    Expliquez-nous votre besoin et DjoPro Clean vous recontactera rapidement.
+  </p>
+
+</section>
+
+<section class="form-section">
+
+  <div class="form-container">
+
+    <h2>Votre demande</h2>
+
+    <p class="intro">
+      Remplissez ce formulaire gratuitement et sans engagement.
+      Nous intervenons dans toute l’Île-de-France.
+    </p>
+
+    <form action="https://formsubmit.co/djoproclean@outlook.fr" method="POST">
+
+      <input type="hidden" name="_subject"
+             value="Nouvelle demande de devis - DjoPro Clean">
+
+      <input type="hidden" name="_captcha" value="false">
+
+      <label for="nom">Nom et prénom *</label>
+      <input
+        type="text"
+        id="nom"
+        name="Nom et prénom"
+        required
+      >
+
+      <label for="telephone">Téléphone *</label>
+      <input
+        type="tel"
+        id="telephone"
+        name="Téléphone"
+        required
+      >
+
+      <label for="email">Adresse e-mail *</label>
+      <input
+        type="email"
+        id="email"
+        name="Email"
+        required
+      >
+
+      <label for="service">Service souhaité *</label>
+
+      <select id="service" name="Service souhaité" required>
+
+        <option value="">Choisissez un service</option>
+
+        <option>Nettoyage de vitres</option>
+        <option>Nettoyage de terrasse</option>
+        <option>Nettoyage de maison</option>
+        <option>Nettoyage de commerce</option>
+        <option>Nettoyage de locaux</option>
+        <option>Nettoyage de fin de chantier</option>
+        <option>Dégraissage de machines</option>
+        <option>Autre service de nettoyage</option>
+
+      </select>
+
+      <label for="adresse">Adresse / Ville d’intervention *</label>
+
+      <input
+        type="text"
+        id="adresse"
+        name="Adresse ou ville"
+        required
+      >
+
+      <label for="message">
+        Décrivez votre besoin *
+      </label>
+
+      <textarea
+        id="message"
+        name="Détails de la demande"
+        placeholder="Exemple : nettoyage d'un appartement de 70 m² après déménagement..."
+        required
+      ></textarea>
+
+      <button type="submit">
+        Envoyer ma demande de devis
+      </button>
+
+    </form>
+
+    <div class="contact">
+
+      <p>Vous préférez nous contacter directement ?</p>
+
+      <p>
+        📞 <a href="tel:+33758465300">07 58 46 53 00</a>
+      </p>
+
+      <p>
+        💬 <a href="https://wa.me/33765794252">WhatsApp</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 DjoPro Clean — Nettoyage professionnel en Île-de-France
+</footer>
+
+</body>
+</html>

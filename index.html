@@ -300,8 +300,23 @@
     @media (max-width: 600px) {
       .nav {
         justify-content: center;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
       }
+      nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+}
+
+nav a {
+    font-size: 11px;
+    white-space: nowrap;
+}
 
       .brand {
         font-size: 20px;
